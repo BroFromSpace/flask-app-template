@@ -13,7 +13,6 @@ ENV PYTHONUNBUFFERED=1 \
     VENV_PATH="/opt/pysetup/.venv"
 
 ENV PATH="${POETRY_HOME}/bin:${VENV_PATH}/bin:${PATH}"
-# ENV PYTHONPATH="ukraine_war_base:${PYTHONPATH}"
 
 
 FROM python-base AS builder-base
