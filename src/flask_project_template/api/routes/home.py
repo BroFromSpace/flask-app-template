@@ -1,10 +1,10 @@
 from flask import Blueprint
 
-from ..views import home as home_views
+from flask_project_template.api.views import home
 
 
 def setup() -> Blueprint:
     bp = Blueprint("home", __name__, url_prefix="/")
-    bp.add_url_rule("/", "get", home_views.home)
+    bp.add_url_rule("/", "get", home.home)
 
     return bp
