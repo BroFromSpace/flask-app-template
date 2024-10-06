@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "flask-project-template"
+version = "0.1.0"
+description = ""
+authors = ["Bro From Space <brofromspace@example.com>"]
+readme = "README.md"
+packages = [{include = "flask_project_template", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+# <--- Ruff --->
+[tool.ruff]
+src = ["src/flask_project_template"]
+line-length = 79
+respect-gitignore = true
+output-format = "grouped"
+show-fixes = true
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "W",
+    "I",
+    "N"
+]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

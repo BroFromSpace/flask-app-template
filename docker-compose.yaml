@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    environment:
+      - ENV=development
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src/flask_project_template:/usr/src/app/flask_project_template:cached
+    profiles:
+      - app
